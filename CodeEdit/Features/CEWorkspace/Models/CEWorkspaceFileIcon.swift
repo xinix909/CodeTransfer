@@ -52,6 +52,7 @@ enum FileIcon {
         case lsp
         case lua
         case m
+        case mm
         case Makefile
         case md
         case mid
@@ -137,7 +138,7 @@ enum FileIcon {
             return "text.quote"
         case .h:
             return "h.square"
-        case .m:
+        case .m, .mm:
             return "m.square"
         case .vue:
             return "v.square"
@@ -195,6 +196,8 @@ enum FileIcon {
             return Color(red: 0.667, green: 0.031, blue: 0.133, opacity: 1.0)
         case .m:
             return Color(red: 0.271, green: 0.106, blue: 0.525, opacity: 1.0)
+        case .mm:
+            return Color(red: 0.371, green: 0.206, blue: 0.725, opacity: 1.0)
         case .go:
             return Color(red: 0.02, green: 0.675, blue: 0.757, opacity: 1.0)
         case .sum, .mod:

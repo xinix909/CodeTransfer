@@ -1576,6 +1576,13 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		32948BB72C8A60BB00307D36 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3E0196712A392170002648D8 /* ShellIntegration */ = {
 			isa = PBXGroup;
 			children = (
@@ -3145,6 +3152,7 @@
 		B658FB2E27DA9E0F00EA4DBD /* CodeEdit */ = {
 			isa = PBXGroup;
 			children = (
+				32948BB72C8A60BB00307D36 /* New Group */,
 				5831E3C52933E6CB00D5A6D2 /* Features */,
 				D7211D4427E066D4008F2ED7 /* Localization */,
 				B658FB3527DA9E1000EA4DBD /* Preview Content */,

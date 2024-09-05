@@ -9,7 +9,7 @@ import Cocoa
 import SwiftUI
 
 final class CodeEditSplitViewController: NSSplitViewController {
-    static let minSidebarWidth: CGFloat = 242
+    static let minSidebarWidth: CGFloat = 500
     static let maxSnapWidth: CGFloat = snapWidth + 10
     static let snapWidth: CGFloat = 272
     static let minSnapWidth: CGFloat = snapWidth - 10
