@@ -1,5 +1,4 @@
 {
-  "originHash" : "b6e0c892d567c4fb43e4135487752085a69cf403b95ee27c28e9d213dd3bbf5c",
   "pins" : [
     {
       "identity" : "anycodable",
@@ -17,15 +16,6 @@
       "state" : {
         "revision" : "ad28213a968586abb0cb21a8a56a3587227895f1",
         "version" : "0.1.2"
-      }
-    },
-    {
-      "identity" : "codeeditlanguages",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CodeEditApp/CodeEditLanguages.git",
-      "state" : {
-        "revision" : "5b27f139269e1ea49ceae5e56dca44a3ccad50a1",
-        "version" : "0.1.19"
       }
     },
     {
@@ -262,5 +252,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

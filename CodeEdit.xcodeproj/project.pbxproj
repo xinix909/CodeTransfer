@@ -98,6 +98,7 @@
 		30CB64912C16CA8100CC8A9E /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 30CB64902C16CA8100CC8A9E /* LanguageServerProtocol */; };
 		30CB64942C16CA9100CC8A9E /* LanguageClient in Frameworks */ = {isa = PBXBuildFile; productRef = 30CB64932C16CA9100CC8A9E /* LanguageClient */; };
 		30E6D0012A6E505200A58B20 /* NavigatorSidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6D0002A6E505200A58B20 /* NavigatorSidebarViewModel.swift */; };
+		32948BB62C8A31FA00307D36 /* CodeEditLanguages in Frameworks */ = {isa = PBXBuildFile; productRef = 32948BB52C8A31FA00307D36 /* CodeEditLanguages */; };
 		3E0196732A3921AC002648D8 /* codeedit_shell_integration_rc.zsh in Resources */ = {isa = PBXBuildFile; fileRef = 3E0196722A3921AC002648D8 /* codeedit_shell_integration_rc.zsh */; };
 		3E01967A2A392B45002648D8 /* codeedit_shell_integration.bash in Resources */ = {isa = PBXBuildFile; fileRef = 3E0196792A392B45002648D8 /* codeedit_shell_integration.bash */; };
 		4E7F066629602E7B00BB3C12 /* CodeEditSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F066529602E7B00BB3C12 /* CodeEditSplitViewController.swift */; };
@@ -758,6 +759,7 @@
 		30B087FA2C0D53080063A882 /* LSPUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSPUtil.swift; sourceTree = "<group>"; };
 		30CB648C2C12680F00CC8A9E /* LSPEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPEventHandler.swift; sourceTree = "<group>"; };
 		30E6D0002A6E505200A58B20 /* NavigatorSidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorSidebarViewModel.swift; sourceTree = "<group>"; };
+		322020302C8A30F70067ADDC /* CodeEditLanguages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeEditLanguages; path = ../../../../Downloads/CodeEditLanguages; sourceTree = "<group>"; };
 		3E0196722A3921AC002648D8 /* codeedit_shell_integration_rc.zsh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = codeedit_shell_integration_rc.zsh; sourceTree = "<group>"; };
 		3E0196792A392B45002648D8 /* codeedit_shell_integration.bash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = codeedit_shell_integration.bash; sourceTree = "<group>"; };
 		4E7F066529602E7B00BB3C12 /* CodeEditSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditSplitViewController.swift; sourceTree = "<group>"; };
@@ -1277,6 +1279,7 @@
 				6C4E37FC2C73E00700AEE7B5 /* SwiftTerm in Frameworks */,
 				6C6BD6F429CD142C00235D17 /* CollectionConcurrencyKit in Frameworks */,
 				6C85BB442C210EFD00EB5DEF /* SwiftUIIntrospect in Frameworks */,
+				32948BB62C8A31FA00307D36 /* CodeEditLanguages in Frameworks */,
 				6CB446402B6DFF3A00539ED0 /* CodeEditSourceEditor in Frameworks */,
 				2816F594280CF50500DD548B /* CodeEditSymbols in Frameworks */,
 				30CB64942C16CA9100CC8A9E /* LanguageClient in Frameworks */,
@@ -1563,6 +1566,14 @@
 				30B087F52C0D53080063A882 /* LanguageServer+TypeDefinition.swift */,
 			);
 			path = LanguageServerExtensions;
+			sourceTree = "<group>";
+		};
+		3220202F2C8A30D60067ADDC /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				322020302C8A30F70067ADDC /* CodeEditLanguages */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		3E0196712A392170002648D8 /* ShellIntegration */ = {
@@ -3101,6 +3112,7 @@
 		B658FB2327DA9E0F00EA4DBD = {
 			isa = PBXGroup;
 			children = (
+				3220202F2C8A30D60067ADDC /* Dependencies */,
 				B658FB2E27DA9E0F00EA4DBD /* CodeEdit */,
 				587B60F329340A8000D5CD8F /* CodeEditTests */,
 				6C96191F2C3F27E3009733CE /* CodeEditUITests */,
@@ -3599,6 +3611,7 @@
 				6C0824A02C5C0C9700A0751E /* SwiftTerm */,
 				6CE21E862C650D2C0031B056 /* SwiftTerm */,
 				6C4E37FB2C73E00700AEE7B5 /* SwiftTerm */,
+				32948BB52C8A31FA00307D36 /* CodeEditLanguages */,
 			);
 			productName = CodeEdit;
 			productReference = B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */;
@@ -5593,6 +5606,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 30CB64922C16CA9100CC8A9E /* XCRemoteSwiftPackageReference "LanguageClient" */;
 			productName = LanguageClient;
+		};
+		32948BB52C8A31FA00307D36 /* CodeEditLanguages */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CodeEditLanguages;
 		};
 		583E529B29361BAB001AB554 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
