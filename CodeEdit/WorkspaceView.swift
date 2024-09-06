@@ -97,6 +97,7 @@ struct WorkspaceView: View {
                             }
                             .offset(y: utilityAreaViewModel.isMaximized ? 0 : editorsHeight - statusbarHeight)
                         }
+                        .hidden()
                     }
                     .onChange(of: focusedEditor) { newValue in
                         /// update active tab group only if the new one is not the same with it.

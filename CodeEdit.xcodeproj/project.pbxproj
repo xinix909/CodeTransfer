@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,11 @@
 		20EBB501280C325D00F3A5DA /* FileInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBB500280C325D00F3A5DA /* FileInspectorView.swift */; };
 		20EBB503280C327C00F3A5DA /* HistoryInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBB502280C327C00F3A5DA /* HistoryInspectorView.swift */; };
 		20EBB505280C329800F3A5DA /* CommitListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBB504280C329800F3A5DA /* CommitListItemView.swift */; };
+		276DE8DC2C8B16150092FC8F /* SourceTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DE8DB2C8B16150092FC8F /* SourceTranslateView.swift */; };
+		276DE8DF2C8B3D130092FC8F /* TranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DE8DE2C8B3D130092FC8F /* TranslateManager.swift */; };
+		276DE8E22C8B3EE20092FC8F /* ObjcParser in Frameworks */ = {isa = PBXBuildFile; productRef = 276DE8E12C8B3EE20092FC8F /* ObjcParser */; };
+		276DE8E42C8B3EE20092FC8F /* ObjcSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = 276DE8E32C8B3EE20092FC8F /* ObjcSyntax */; };
+		276DE8E62C8B3EE20092FC8F /* ObjcTransfer in Frameworks */ = {isa = PBXBuildFile; productRef = 276DE8E52C8B3EE20092FC8F /* ObjcTransfer */; };
 		2806E9022979588B000040F4 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806E9012979588B000040F4 /* Contributor.swift */; };
 		2806E904297958B9000040F4 /* ContributorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806E903297958B9000040F4 /* ContributorRowView.swift */; };
 		2813F93827ECC4AA00E305E4 /* FindNavigatorResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E201B327E9989900CB86D0 /* FindNavigatorResultList.swift */; };
@@ -450,7 +455,6 @@
 		6CC17B4F2C432AE000834E2C /* CodeEditSourceEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC17B4E2C432AE000834E2C /* CodeEditSourceEditor */; };
 		6CC17B512C43311900834E2C /* ProjectNavigatorViewController+NSOutlineViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC17B502C43311900834E2C /* ProjectNavigatorViewController+NSOutlineViewDataSource.swift */; };
 		6CC17B532C43314000834E2C /* ProjectNavigatorViewController+NSOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC17B522C43314000834E2C /* ProjectNavigatorViewController+NSOutlineViewDelegate.swift */; };
-		6CC17B592C43F53700834E2C /* CodeEditSourceEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 6CC17B582C43F53700834E2C /* CodeEditSourceEditor */; };
 		6CC17B5B2C44258700834E2C /* WindowControllerPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC17B5A2C44258700834E2C /* WindowControllerPropertyWrapper.swift */; };
 		6CC9E4B229B5669900C97388 /* Environment+ActiveEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9E4B129B5669900C97388 /* Environment+ActiveEditor.swift */; };
 		6CD0358A2C3461160091E1F4 /* KeyWindowControllerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD035892C3461160091E1F4 /* KeyWindowControllerObserver.swift */; };
@@ -516,7 +520,6 @@
 		B640A99E29E2184700715F20 /* SettingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640A99D29E2184700715F20 /* SettingsForm.swift */; };
 		B640A9A129E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640A9A029E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift */; };
 		B658FB3427DA9E1000EA4DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B658FB3327DA9E1000EA4DBD /* Assets.xcassets */; };
-		B658FB3727DA9E1000EA4DBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B658FB3627DA9E1000EA4DBD /* Preview Assets.xcassets */; };
 		B65B10EC2B073913002852CF /* CEContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65B10EB2B073913002852CF /* CEContentUnavailableView.swift */; };
 		B65B10EF2B07C454002852CF /* GitClient+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65B10EE2B07C454002852CF /* GitClient+Remote.swift */; };
 		B65B10F22B07D34F002852CF /* GitRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65B10F12B07D34F002852CF /* GitRemote.swift */; };
@@ -699,6 +702,11 @@
 		20EBB500280C325D00F3A5DA /* FileInspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInspectorView.swift; sourceTree = "<group>"; };
 		20EBB502280C327C00F3A5DA /* HistoryInspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInspectorView.swift; sourceTree = "<group>"; };
 		20EBB504280C329800F3A5DA /* CommitListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListItemView.swift; sourceTree = "<group>"; };
+		276DE84A2C8AEC790092FC8F /* CodeEditSourceEditor */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeEditSourceEditor; path = LocalPackages/CodeEditSourceEditor; sourceTree = "<group>"; };
+		276DE84B2C8AEC8A0092FC8F /* CodeEditLanguages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeEditLanguages; path = LocalPackages/CodeEditLanguages; sourceTree = "<group>"; };
+		276DE8DB2C8B16150092FC8F /* SourceTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTranslateView.swift; sourceTree = "<group>"; };
+		276DE8DD2C8B34C10092FC8F /* CodeEditTextView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeEditTextView; path = LocalPackages/CodeEditTextView; sourceTree = "<group>"; };
+		276DE8DE2C8B3D130092FC8F /* TranslateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateManager.swift; sourceTree = "<group>"; };
 		28052DFB29730DE300F4F90A /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		28052DFC29730DF600F4F90A /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		28052DFD29730E0300F4F90A /* Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Beta.xcconfig; sourceTree = "<group>"; };
@@ -759,7 +767,6 @@
 		30B087FA2C0D53080063A882 /* LSPUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSPUtil.swift; sourceTree = "<group>"; };
 		30CB648C2C12680F00CC8A9E /* LSPEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPEventHandler.swift; sourceTree = "<group>"; };
 		30E6D0002A6E505200A58B20 /* NavigatorSidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorSidebarViewModel.swift; sourceTree = "<group>"; };
-		322020302C8A30F70067ADDC /* CodeEditLanguages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CodeEditLanguages; path = ../../../../Downloads/CodeEditLanguages; sourceTree = "<group>"; };
 		3E0196722A3921AC002648D8 /* codeedit_shell_integration_rc.zsh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = codeedit_shell_integration_rc.zsh; sourceTree = "<group>"; };
 		3E0196792A392B45002648D8 /* codeedit_shell_integration.bash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = codeedit_shell_integration.bash; sourceTree = "<group>"; };
 		4E7F066529602E7B00BB3C12 /* CodeEditSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditSplitViewController.swift; sourceTree = "<group>"; };
@@ -1163,7 +1170,6 @@
 		B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B658FB3127DA9E0F00EA4DBD /* WorkspaceView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		B658FB3327DA9E1000EA4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B658FB3627DA9E1000EA4DBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B658FB3827DA9E1000EA4DBD /* CodeEdit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeEdit.entitlements; sourceTree = "<group>"; };
 		B658FB3D27DA9E1000EA4DBD /* CodeEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B658FB4727DA9E1000EA4DBD /* CodeEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1271,6 +1277,8 @@
 				6C85BB402C2105ED00EB5DEF /* CodeEditKit in Frameworks */,
 				6C66C31329D05CDC00DE9ED2 /* GRDB in Frameworks */,
 				58F2EB1E292FB954004A9BDE /* Sparkle in Frameworks */,
+				276DE8E42C8B3EE20092FC8F /* ObjcSyntax in Frameworks */,
+				276DE8E22C8B3EE20092FC8F /* ObjcParser in Frameworks */,
 				6C147C4529A329350089B630 /* OrderedCollections in Frameworks */,
 				6CE21E872C650D2C0031B056 /* SwiftTerm in Frameworks */,
 				6C0617D62BDB4432008C9C42 /* LogStream in Frameworks */,
@@ -1283,9 +1291,9 @@
 				6CB446402B6DFF3A00539ED0 /* CodeEditSourceEditor in Frameworks */,
 				2816F594280CF50500DD548B /* CodeEditSymbols in Frameworks */,
 				30CB64942C16CA9100CC8A9E /* LanguageClient in Frameworks */,
-				6CC17B592C43F53700834E2C /* CodeEditSourceEditor in Frameworks */,
 				6C6BD6F829CD14D100235D17 /* CodeEditKit in Frameworks */,
 				6C0824A12C5C0C9700A0751E /* SwiftTerm in Frameworks */,
+				276DE8E62C8B3EE20092FC8F /* ObjcTransfer in Frameworks */,
 				6C81916B29B41DD300B75C92 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1383,6 +1391,25 @@
 				6CE622682A2A174A0013085C /* InspectorTab.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		276DE8492C8AEC520092FC8F /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				276DE8DD2C8B34C10092FC8F /* CodeEditTextView */,
+				276DE84A2C8AEC790092FC8F /* CodeEditSourceEditor */,
+				276DE84B2C8AEC8A0092FC8F /* CodeEditLanguages */,
+			);
+			name = Submodules;
+			sourceTree = "<group>";
+		};
+		276DE8DA2C8B15EC0092FC8F /* SourceTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				276DE8DB2C8B16150092FC8F /* SourceTranslateView.swift */,
+				276DE8DE2C8B3D130092FC8F /* TranslateManager.swift */,
+			);
+			path = SourceTranslate;
 			sourceTree = "<group>";
 		};
 		28052E0129730F2F00F4F90A /* Configs */ = {
@@ -1566,21 +1593,6 @@
 				30B087F52C0D53080063A882 /* LanguageServer+TypeDefinition.swift */,
 			);
 			path = LanguageServerExtensions;
-			sourceTree = "<group>";
-		};
-		3220202F2C8A30D60067ADDC /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				322020302C8A30F70067ADDC /* CodeEditLanguages */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		32948BB72C8A60BB00307D36 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3E0196712A392170002648D8 /* ShellIntegration */ = {
@@ -3119,7 +3131,7 @@
 		B658FB2327DA9E0F00EA4DBD = {
 			isa = PBXGroup;
 			children = (
-				3220202F2C8A30D60067ADDC /* Dependencies */,
+				276DE8492C8AEC520092FC8F /* Submodules */,
 				B658FB2E27DA9E0F00EA4DBD /* CodeEdit */,
 				587B60F329340A8000D5CD8F /* CodeEditTests */,
 				6C96191F2C3F27E3009733CE /* CodeEditUITests */,
@@ -3152,10 +3164,9 @@
 		B658FB2E27DA9E0F00EA4DBD /* CodeEdit */ = {
 			isa = PBXGroup;
 			children = (
-				32948BB72C8A60BB00307D36 /* New Group */,
+				276DE8DA2C8B15EC0092FC8F /* SourceTranslate */,
 				5831E3C52933E6CB00D5A6D2 /* Features */,
 				D7211D4427E066D4008F2ED7 /* Localization */,
-				B658FB3527DA9E1000EA4DBD /* Preview Content */,
 				3E0196712A392170002648D8 /* ShellIntegration */,
 				58D01C85293167DC00C5B6B4 /* Utils */,
 				B66A4E5529C918A0004573B4 /* SceneID.swift */,
@@ -3170,14 +3181,6 @@
 				5C4BB1E028212B1E00A92FB2 /* World.swift */,
 			);
 			path = CodeEdit;
-			sourceTree = "<group>";
-		};
-		B658FB3527DA9E1000EA4DBD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B658FB3627DA9E1000EA4DBD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		B664C3AD2B965F4500816B4E /* NavigationSettings */ = {
@@ -3615,11 +3618,13 @@
 				6C85BB3F2C2105ED00EB5DEF /* CodeEditKit */,
 				6C85BB432C210EFD00EB5DEF /* SwiftUIIntrospect */,
 				6CC17B4E2C432AE000834E2C /* CodeEditSourceEditor */,
-				6CC17B582C43F53700834E2C /* CodeEditSourceEditor */,
 				6C0824A02C5C0C9700A0751E /* SwiftTerm */,
 				6CE21E862C650D2C0031B056 /* SwiftTerm */,
 				6C4E37FB2C73E00700AEE7B5 /* SwiftTerm */,
 				32948BB52C8A31FA00307D36 /* CodeEditLanguages */,
+				276DE8E12C8B3EE20092FC8F /* ObjcParser */,
+				276DE8E32C8B3EE20092FC8F /* ObjcSyntax */,
+				276DE8E52C8B3EE20092FC8F /* ObjcTransfer */,
 			);
 			productName = CodeEdit;
 			productReference = B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */;
@@ -3715,8 +3720,8 @@
 				6C85BB422C210EFD00EB5DEF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				303E88452C276FD100EEA8D9 /* XCRemoteSwiftPackageReference "LanguageClient" */,
 				303E88462C276FD600EEA8D9 /* XCRemoteSwiftPackageReference "LanguageServerProtocol" */,
-				6CC17B572C43F53700834E2C /* XCRemoteSwiftPackageReference "CodeEditSourceEditor" */,
 				6C4E37FA2C73E00700AEE7B5 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+				276DE8E02C8B3EE20092FC8F /* XCLocalSwiftPackageReference "../ObjcSyntax" */,
 			);
 			productRefGroup = B658FB2D27DA9E0F00EA4DBD /* Products */;
 			projectDirPath = "";
@@ -3745,7 +3750,6 @@
 			files = (
 				B6FF04782B6C08AC002C2C78 /* DefaultThemes in Resources */,
 				283BDCBD2972EEBD002AFF81 /* Package.resolved in Resources */,
-				B658FB3727DA9E1000EA4DBD /* Preview Assets.xcassets in Resources */,
 				3E0196732A3921AC002648D8 /* codeedit_shell_integration_rc.zsh in Resources */,
 				58A5DFA529339F6400D1BD5D /* default_keybindings.json in Resources */,
 				6C48B5D42C0D0743001E9955 /* codeedit_shell_integration_env.zsh in Resources */,
@@ -4062,6 +4066,7 @@
 				6C147C4D29A32AA30089B630 /* EditorAreaView.swift in Sources */,
 				B6152B802ADAE421004C6012 /* CodeEditWindowControllerExtensions.swift in Sources */,
 				587B9E7B29301D8F00AC7927 /* GitHubRouter.swift in Sources */,
+				276DE8DC2C8B16150092FC8F /* SourceTranslateView.swift in Sources */,
 				B68108042C60287F008B27C1 /* StartTaskToolbarButton.swift in Sources */,
 				201169E22837B3D800F92B46 /* SourceControlNavigatorChangesView.swift in Sources */,
 				850C631029D6B01D00E1444C /* SettingsView.swift in Sources */,
@@ -4246,6 +4251,7 @@
 				6C5FDF7A29E6160000BC08C0 /* AppSettings.swift in Sources */,
 				61A3E3DF2C3318C900076BD3 /* CEWorkspaceSettingsTaskListView.swift in Sources */,
 				58F2EB07292FB2B0004A9BDE /* GeneralSettings.swift in Sources */,
+				276DE8DF2C8B3D130092FC8F /* TranslateManager.swift in Sources */,
 				B6041F4D29D7A4E9000F3454 /* SettingsPageView.swift in Sources */,
 				587B9E9A29301D8F00AC7927 /* GitStatus.swift in Sources */,
 				B65B10F82B081A34002852CF /* SourceControlNavigatorNoRemotesView.swift in Sources */,
@@ -5468,6 +5474,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		276DE8E02C8B3EE20092FC8F /* XCLocalSwiftPackageReference "../ObjcSyntax" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ObjcSyntax;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		2816F592280CF50500DD548B /* XCRemoteSwiftPackageReference "CodeEditSymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -5589,17 +5602,21 @@
 				minimumVersion = 1.2.0;
 			};
 		};
-		6CC17B572C43F53700834E2C /* XCRemoteSwiftPackageReference "CodeEditSourceEditor" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CodeEditApp/CodeEditSourceEditor";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.5;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		276DE8E12C8B3EE20092FC8F /* ObjcParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ObjcParser;
+		};
+		276DE8E32C8B3EE20092FC8F /* ObjcSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ObjcSyntax;
+		};
+		276DE8E52C8B3EE20092FC8F /* ObjcTransfer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ObjcTransfer;
+		};
 		2816F593280CF50500DD548B /* CodeEditSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2816F592280CF50500DD548B /* XCRemoteSwiftPackageReference "CodeEditSymbols" */;
@@ -5688,11 +5705,6 @@
 		};
 		6CC17B4E2C432AE000834E2C /* CodeEditSourceEditor */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = CodeEditSourceEditor;
-		};
-		6CC17B582C43F53700834E2C /* CodeEditSourceEditor */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6CC17B572C43F53700834E2C /* XCRemoteSwiftPackageReference "CodeEditSourceEditor" */;
 			productName = CodeEditSourceEditor;
 		};
 		6CE21E862C650D2C0031B056 /* SwiftTerm */ = {

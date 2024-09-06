@@ -81,6 +81,7 @@ struct AreaTabBar<Tab: AreaTab>: View {
                         x: (position == .top) ? (tabOffsets[tab] ?? 0) : 0,
                         y: (position == .side) ? (tabOffsets[tab] ?? 0) : 0
                     )
+                    .padding(.horizontal, 4)
                     .background(makeTabItemGeometryReader(tab: tab))
                     .simultaneousGesture(makeAreaTabDragGesture(tab: tab))
             }
@@ -98,7 +99,7 @@ struct AreaTabBar<Tab: AreaTab>: View {
         Button {
             selection = tab
         } label: {
-            getSafeImage(named: tab.systemImage, accessibilityDescription: tab.title)
+            Text(tab.title)
                 .font(.system(size: 12.5))
                 .symbolVariant(tab == selection ? .fill : .none)
                 .help(tab.title)

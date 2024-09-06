@@ -8,7 +8,7 @@
 import Foundation
 
 class InspectorAreaViewModel: ObservableObject {
-    @Published var selectedTab: InspectorTab? = .file
+    @Published var selectedTab: InspectorTab? = .translate
     /// The tab bar items in the Inspector
     @Published var tabItems: [InspectorTab] = []
 

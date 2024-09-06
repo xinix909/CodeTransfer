@@ -281,7 +281,7 @@ public extension CodeLanguage {
     static let objc: CodeLanguage = .init(
         id: .objc,
         tsName: "objc",
-        extensions: ["m", "h"],
+        extensions: ["mm", "m", "h"],
         lineCommentString: "//",
         rangeCommentStrings: ("/*", "*/")
     )

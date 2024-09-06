@@ -19,7 +19,7 @@ class UtilityAreaViewModel: ObservableObject {
     @Published var selectedTerminals: Set<UtilityAreaTerminal.ID> = []
 
     /// Indicates whether debugger is collapse or not
-    @Published var isCollapsed: Bool = false
+    @Published var isCollapsed: Bool = true
 
     /// Returns true when the drawer is visible
     @Published var isMaximized: Bool = false
@@ -44,7 +44,8 @@ class UtilityAreaViewModel: ObservableObject {
     }
 
     func restoreFromState(_ workspace: WorkspaceDocument) {
-        isCollapsed = workspace.getFromWorkspaceState(.utilityAreaCollapsed) as? Bool ?? false
+        isCollapsed = true
+//        isCollapsed = workspace.getFromWorkspaceState(.utilityAreaCollapsed) as? Bool ?? false
         currentHeight = workspace.getFromWorkspaceState(.utilityAreaHeight) as? Double ?? 300.0
         isMaximized = workspace.getFromWorkspaceState(.utilityAreaMaximized) as? Bool ?? false
     }

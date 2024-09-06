@@ -18,23 +18,23 @@ struct InspectorAreaView: View {
     @AppSettings(\.general.inspectorTabBarPosition)
     var sidebarPosition: SettingsData.SidebarTabBarPosition
 
-    @State private var selection: InspectorTab? = .file
+    @State private var selection: InspectorTab? = .translate
 
     init(viewModel: InspectorAreaViewModel) {
         self.viewModel = viewModel
 
-        viewModel.tabItems = [.file, .gitHistory]
-        viewModel.tabItems += extensionManager
-            .extensions
-            .map { ext in
-                ext.availableFeatures.compactMap {
-                    if case .sidebarItem(let data) = $0, data.kind == .inspector {
-                        return InspectorTab.uiExtension(endpoint: ext.endpoint, data: data)
-                    }
-                    return nil
-                }
-            }
-            .joined()
+        viewModel.tabItems = [.translate, .extractWording]
+//        viewModel.tabItems += extensionManager
+//            .extensions
+//            .map { ext in
+//                ext.availableFeatures.compactMap {
+//                    if case .sidebarItem(let data) = $0, data.kind == .inspector {
+//                        return InspectorTab.uiExtension(endpoint: ext.endpoint, data: data)
+//                    }
+//                    return nil
+//                }
+//            }
+//            .joined()
     }
 
     func getExtension(_ id: String) -> ExtensionInfo? {

@@ -9,7 +9,8 @@ import Cocoa
 import SwiftUI
 
 final class CodeEditSplitViewController: NSSplitViewController {
-    static let minSidebarWidth: CGFloat = 500
+    static let minNaviWidth: CGFloat = 200
+    static let minSidebarWidth: CGFloat = 350
     static let maxSnapWidth: CGFloat = snapWidth + 10
     static let snapWidth: CGFloat = 272
     static let minSnapWidth: CGFloat = snapWidth - 10
@@ -90,6 +91,7 @@ final class CodeEditSplitViewController: NSSplitViewController {
                 .environmentObject(workspace)
                 .environmentObject(editorManager)
         })
+        inspector.isCollapsed = false
 
         addSplitViewItem(inspector)
     }
@@ -98,7 +100,7 @@ final class CodeEditSplitViewController: NSSplitViewController {
         let navigator = NSSplitViewItem(sidebarWithViewController: NSHostingController(rootView: view))
         navigator.titlebarSeparatorStyle = .none
         navigator.isSpringLoaded = true
-        navigator.minimumThickness = Self.minSidebarWidth
+        navigator.minimumThickness = Self.minNaviWidth
         navigator.collapseBehavior = .useConstraints
         return navigator
     }
@@ -119,7 +121,7 @@ final class CodeEditSplitViewController: NSSplitViewController {
         guard let workspace else { return }
 
         let navigatorWidth = workspace.getFromWorkspaceState(.splitViewWidth) as? CGFloat
-        splitView.setPosition(navigatorWidth ?? Self.minSidebarWidth, ofDividerAt: 0)
+        splitView.setPosition(navigatorWidth ?? Self.minNaviWidth, ofDividerAt: 0)
 
         if let firstSplitView = splitViewItems.first {
             firstSplitView.isCollapsed = workspace.getFromWorkspaceState(
@@ -154,12 +156,12 @@ final class CodeEditSplitViewController: NSSplitViewController {
             // Navigator
             if (Self.minSnapWidth...Self.maxSnapWidth).contains(proposedPosition) {
                 return Self.snapWidth
-            } else if proposedPosition <= Self.minSidebarWidth / 2 {
+            } else if proposedPosition <= Self.minNaviWidth / 2 {
                 hapticCollapse(splitViewItems.first, collapseAction: true)
                 return 0
             } else {
                 hapticCollapse(splitViewItems.first, collapseAction: false)
-                return max(Self.minSidebarWidth, proposedPosition)
+                return max(Self.minNaviWidth, proposedPosition)
             }
         case 1:
             let proposedWidth = view.frame.width - proposedPosition

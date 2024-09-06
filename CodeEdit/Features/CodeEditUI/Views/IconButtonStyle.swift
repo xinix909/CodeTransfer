@@ -80,7 +80,7 @@ struct IconButtonStyle: ButtonStyle {
                     ? Color(.controlAccentColor)
                     : Color(.secondaryLabelColor)
                 )
-                .frame(width: size?.width, height: size?.height, alignment: .center)
+//                .frame(width: size?.width, height: size?.height, alignment: .center)
                 .contentShape(Rectangle())
                 .brightness(
                     configuration.isPressed
