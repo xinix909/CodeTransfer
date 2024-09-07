@@ -1,6 +1,0 @@
-[submodule "LocalPackages/CodeEditSourceEditor"]
-	path = LocalPackages/CodeEditSourceEditor
-	url = https://github.com/CodeEditApp/CodeEditSourceEditor
-[submodule "LocalPackages/CodeEditTextView"]
-	path = LocalPackages/CodeEditTextView
-	url = git@github.com:xinix909/CodeEditTextView.git
